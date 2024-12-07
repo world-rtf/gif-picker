@@ -1,4 +1,4 @@
-# GIF-PEAKER
+# GIF-PIKER
 ![gif](gifff.gif)
 ## Getting Started
 First, run the development server:
