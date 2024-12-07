@@ -1,6 +1,6 @@
-![gif](gifff.gif)
 
 ## Getting Started
+![gif](gifff.gif)
 
 First, run the development server:
 
