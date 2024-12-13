@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #171717;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.flex-1::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-block {
+  border-radius: 4px;
+  width: 437px;
+  height: 340px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative; /*  относительное позиционирование для центрирования окна гифок */
+}
+
+.input-div {
+  border: 1px solid #dce1e5;
+  border-radius: 0 0 4px 4px;
+  padding: 13px 16px;
+  width: 437px;
+  height: 62px;
+  background: #fafbfc;
+}
+
+.input-block {
+  border: 1px solid #d3d9de;
+  border-radius: 6px;
+  padding: 6px 12px;
+  width: 405px;
+  height: 36px;
+  background: #fff;
+}
+
+.chat {
+  overflow-y: auto;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
+.message-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.text-message {
+  background-color: #f1f1f1; 
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+  margin-left: 10px;
+  position: relative;
+}
+
+.gif-message {
+  margin-left: 10px;
+}
+
+.gif-message img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.message-time {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 0.8em; 
+  color: #828282;
+  align-self: flex-end;
+}
+
+
+.gif-window {
+  border: 1px solid #d3d9de;
+  border-radius: 2px;
+  width: 404px;
+  height: 248px;
+  background-color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gif-item {
+  height: 118px;
+  object-fit: cover; /* Обеспечивает обрезку изображения, чтобы оно заполнило ячейку */
+  border-radius: 4px;
+  cursor: pointer;
+  flex-grow: 1; /* Позволяет элементам занимать доступное пространство */
+  flex-basis: auto; /* Позволяет элементам иметь свою ширину */
+}
+
+.gif-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 
+              0 13px 8px 0 rgba(0, 0, 0, 0.12), 
+              0 4px 4px 0 rgba(0, 0, 0, 0.25);}
+
+.message-container:first-child {
+  margin-top: 10px;
+}
+
+
+.input-div {
+  position: relative
+}
+
+.input-container {
+  position: relative; 
+}
+
+.input-block {
+  border: 1px solid #d3d9de;
+  border-radius: 6px;
+  padding: 6px 12px;
+  width: 405px;
+  height: 36px;
+  background: #fff;
+  position: relative; 
+  z-index: 1;
+  text-decoration: none;
+  outline: none;
+}
+
+.input-preview {
+  position: absolute;
+  top: 19px; 
+  left: 29px;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  
+}
+
+.highlight {
+  background: linear-gradient(135deg, #2EE6A8 0%, #3399FF 34.37%, #9933FF 69.27%, #FF3399 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+
+.scrolling {
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px; 
+  padding-bottom: 8px; 
+  width: 390px;
+  height: 232px;
+  background-color: white;
+  position: absolute;
+  overflow-y: auto;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 1000;
+}
+
+.scrolling::-webkit-scrollbar {
+  width: 6px;
+}
+.scrolling::-webkit-scrollbar-thumb {
+  background: #dae2ea;
+  border-radius: 10px;
+  left: 10px;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
