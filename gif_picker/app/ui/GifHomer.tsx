@@ -153,7 +153,7 @@ const GifHomer = () => {
             </div>
 
         </div>
-    );
+
 }
 
 export default GifHomer;
