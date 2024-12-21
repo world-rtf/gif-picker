@@ -21,7 +21,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -96,7 +95,7 @@ body {
   margin-left: 10px;
   margin-top: 5px;
   font-size: 0.8em; 
-  color: #828282;
+  color: #99a2ad;
   align-self: flex-end;
 }
 
@@ -122,11 +121,10 @@ body {
 
 .gif-item {
   height: 118px;
-  object-fit: cover; /* Обеспечивает обрезку изображения, чтобы оно заполнило ячейку */
-  border-radius: 4px;
+  object-fit: cover;
   cursor: pointer;
-  flex-grow: 1; /* Позволяет элементам занимать доступное пространство */
-  flex-basis: auto; /* Позволяет элементам иметь свою ширину */
+  flex-grow: 1; 
+  flex-basis: auto; 
 }
 
 .gif-item:hover {
@@ -180,8 +178,8 @@ body {
 
 
 .scrolling {
-  padding-top: 0;
-  padding-left: 8px;
+  padding-top: 4px;
+  padding-left: 4px;
   padding-right: 8px; 
   padding-bottom: 8px; 
   width: 390px;
@@ -208,4 +206,16 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/google/Roboto-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
 }
